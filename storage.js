@@ -2,8 +2,9 @@ class Storage {
     static addTodoToStorage(newTodo) {
         let todos = this.getTodosFromStorage();
 
-        todos.push(newTodo);
-
+        if(todos.indexOf(newTodo) === -1){
+            todos.push(newTodo);
+        }
         localStorage.setItem("todos", JSON.stringify(todos));
     }
     // Storage'a Kontrolü ve Obje Oluşturma
