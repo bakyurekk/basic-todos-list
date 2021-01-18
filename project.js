@@ -17,8 +17,8 @@ function eventListeners(){
 // Todo Ekleme 
 function addTodo(e){
     const newTodo = todoInput.value.trim();
-
-    if (newTodo === "" ) {
+    
+    if (newTodo === "" || newTodo.indexOf() === -1 ) {
         UI.showAlert("Lütfen bir todo girini...","danger");
     }
     else {
